@@ -62,22 +62,19 @@ const Home = () => {
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-7xl lg:text-8xl font-black leading-none tracking-tight">
-                <span className="block font-black text-white">Create.</span>
-                <span className="block font-light italic text-purple-300">
-                  Publish.
-                </span>
+              <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black leading-none tracking-tight">
+                <span className="block font-black text-white">Content</span>
                 <span className="block font-black bg-gradient-to-r from-blue-400 via-purple-400 to-green-400 bg-clip-text text-transparent">
-                  Grow.
+                  Forge
                 </span>
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl md:max-w-none">
-                The AI-powered platform that turns your ideas into{" "}
+                Shape raw ideas into{" "}
                 <span className="text-purple-300 font-semibold">
-                  engaging content
+                  polished content
                 </span>{" "}
-                and helps you build a thriving creator business.
+                with AI drafting, publishing tools, and creator analytics.
               </p>
             </div>
 
@@ -350,11 +347,13 @@ const Home = () => {
       <section className="relative z-10 py-16 sm:py-24 px-4 sm:px-6 bg-gradient-to-r from-gray-900/50 to-purple-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 sm:mb-8">
-            <span className="gradient-text-primary">Ready to create?</span>
+            <span className="gradient-text-primary">
+              Start forging your next post
+            </span>
           </h2>
           <p className="text-xl text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto">
-            Join thousands of creators who are already building their audience
-            and growing their business with our AI-powered platform.
+            Join creators building stronger ideas, sharper posts, and growing
+            audiences with ContentForge.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -385,7 +384,7 @@ const Home = () => {
       <footer className="relative z-10 border-t py-8 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-muted-foreground">
-            Built for creators who want to publish smarter.
+            ContentForge helps creators write, publish, and grow smarter.
           </p>
         </div>
       </footer>

@@ -1,6 +1,6 @@
-# AI Content Creator
+# ContentForge
 
-AI Content Creator is a full-stack publishing platform for creators who want to draft, edit, publish, and grow content from one dashboard. It combines AI-assisted writing, rich post editing, public creator profiles, engagement tools, and analytics in a modern Next.js application.
+ContentForge is a full-stack publishing platform for creators who want to draft, edit, publish, and grow content from one dashboard. It combines AI-assisted writing, rich post editing, public creator profiles, engagement tools, and analytics in a modern Next.js application.
 
 ## Features
 

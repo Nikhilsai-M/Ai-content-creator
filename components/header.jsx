@@ -41,7 +41,7 @@ export default function Header() {
         <Link href={isAuthenticated ? "/feed" : "/"} className="flex-shrink-0">
           <Image
             src="/logo.png"
-            alt="AI Content Creator logo"
+            alt="ContentForge logo"
             width={96}
             height={32}
             className="h-8 sm:h-10 w-auto object-contain"
