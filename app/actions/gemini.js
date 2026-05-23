@@ -3,6 +3,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const geminiModelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
+
+const getGeminiModel = () =>
+  genAI.getGenerativeModel({ model: geminiModelName });
 
 export async function generateBlogContent(title, category = "", tags = []) {
   try {
@@ -10,7 +14,7 @@ export async function generateBlogContent(title, category = "", tags = []) {
       throw new Error("Title is required to generate content");
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = getGeminiModel();
 
     // Create a detailed prompt for blog content generation
     const prompt = `
@@ -83,7 +87,7 @@ export async function improveContent(
       throw new Error("Content is required for improvement");
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = getGeminiModel();
 
     let prompt = "";
 

@@ -56,6 +56,7 @@ NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=
 
 # Gemini
 GEMINI_API_KEY=
+GEMINI_MODEL=gemini-2.5-flash
 ```
 
 Run the development server:
