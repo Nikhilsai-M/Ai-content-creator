@@ -8,6 +8,10 @@ const geminiModelName = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 const getGeminiModel = () =>
   genAI.getGenerativeModel({ model: geminiModelName });
 
+const isGeminiApiKeyError = (error) =>
+  error.message?.includes("API key") ||
+  error.message?.includes("API_KEY_INVALID");
+
 export async function generateBlogContent(title, category = "", tags = []) {
   try {
     if (!title || title.trim().length === 0) {
@@ -57,10 +61,11 @@ Start directly with the introduction paragraph.
     console.error("Gemini AI Error:", error);
 
     // Handle specific error types
-    if (error.message?.includes("API key")) {
+    if (isGeminiApiKeyError(error)) {
       return {
         success: false,
-        error: "AI service configuration error. Please try again later.",
+        error:
+          "Gemini API key is invalid. Create a new key in Google AI Studio and update GEMINI_API_KEY.",
       };
     }
 
@@ -148,6 +153,15 @@ Requirements:
     };
   } catch (error) {
     console.error("Content improvement error:", error);
+
+    if (isGeminiApiKeyError(error)) {
+      return {
+        success: false,
+        error:
+          "Gemini API key is invalid. Create a new key in Google AI Studio and update GEMINI_API_KEY.",
+      };
+    }
+
     return {
       success: false,
       error: error.message || "Failed to improve content. Please try again.",
